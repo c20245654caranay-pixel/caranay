@@ -1,14 +1,27 @@
 body{
-    background-color: purple;
-    line-height: 1.6
+    background-color: rgb(192, 176, 176);
+    
 
 }
-h1 {
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 1rem
-    
+h2 {
+    color: rgb(175, 102, 102);
+    font-family: ariel, sans-serif;
+    letter-spacing: 5px;
+    font-size: 30px;
+
 }
+p{color: rgb(128, 97, 97);
+}
+.about-me {
+     color: rgb(46, 163, 95);
+} 
+header{
+    color: #000;
+}
+    
+
+
+
 
 
 
