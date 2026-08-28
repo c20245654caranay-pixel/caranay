@@ -1,0 +1,392 @@
+# CCAD-BSIS-3B-ACTIVITY-1
+# JavaScript Hands-On Activity
+## Student Grade & Performance System
+
+![Duration](https://img.shields.io/badge/Duration-60%20Minutes-blue)
+![Mode](https://img.shields.io/badge/Mode-Individual%20Hands--On%20Activity-green)
+![Difficulty](https://img.shields.io/badge/Difficulty-Beginner-brightgreen)
+![Start%20Time](https://img.shields.io/badge/Start%20Time-7%3A30%20AM-orange)
+
+---
+
+## Learning Objectives
+
+By the end of this activity, students should be able to:
+
+- Use `if...else if...else` statements for decision-making.
+- Use `for` loops to process multiple records.
+- Create JavaScript objects and access their properties.
+- Create and call regular functions.
+- Create and use arrow functions.
+- Combine these concepts into a small working JavaScript program.
+
+---
+
+## Problem Scenario
+
+You are developing a simple **Student Performance System**.
+
+The system contains several students. Each student has:
+
+- Name
+- Age
+- Course
+- Grade
+
+Your task is to create a JavaScript program that displays each student's information and determines whether the student is **Excellent**, **Passed**, or **Failed**.
+
+---
+
+# Task 1 – Create Objects and Access Properties
+**Time: 10 minutes**
+
+Copy the following starter code into your JavaScript file:
+
+```javascript
+const students = [
+    {
+        name: "Juan",
+        age: 18,
+        course: "BSIT",
+        grade: 92
+    },
+    {
+        name: "Maria",
+        age: 19,
+        course: "BSCS",
+        grade: 85
+    },
+    {
+        name: "Pedro",
+        age: 18,
+        course: "BSIT",
+        grade: 74
+    },
+    {
+        name: "Ana",
+        age: 20,
+        course: "BSIS",
+        grade: 65
+    }
+];
+
+console.log(students);
+```
+
+### Activity
+
+Display the information of the **first student** using object property access.
+
+Do not simply print the entire object.
+
+Use properties such as:
+
+```javascript
+students[0].name
+students[0].age
+students[0].course
+students[0].grade
+```
+
+### Expected Output
+
+```text
+Name: Juan
+Age: 18
+Course: BSIT
+Grade: 92
+```
+
+---
+
+# Task 2 – Create a Function with `if` Statements
+**Time: 10 minutes**
+
+Create a regular function named `getStatus(grade)`.
+
+Use the following rules:
+
+| Grade | Status |
+|---|---|
+| 90–100 | Excellent |
+| 75–89 | Passed |
+| Below 75 | Failed |
+
+### Function Structure
+
+```javascript
+function getStatus(grade) {
+    // your code here
+}
+```
+
+Use:
+
+- `if`
+- `else if`
+- `else`
+
+### Test Your Function
+
+Test the function using:
+
+```javascript
+console.log(getStatus(95));
+console.log(getStatus(80));
+console.log(getStatus(70));
+```
+
+### Expected Output
+
+```text
+Excellent
+Passed
+Failed
+```
+
+---
+
+# Task 3 – Process Students Using a `for` Loop
+**Time: 15 minutes**
+
+Create a `for` loop that processes **every student** in the `students` array.
+
+Use this basic structure:
+
+```javascript
+for (let i = 0; i < students.length; i++) {
+    // your code here
+}
+```
+
+Inside the loop, access:
+
+```javascript
+students[i].name
+students[i].course
+students[i].grade
+```
+
+Then use:
+
+```javascript
+getStatus(students[i].grade)
+```
+
+to determine the student's status.
+
+### Expected Output
+
+```text
+Juan - BSIT - 92 - Excellent
+Maria - BSCS - 85 - Passed
+Pedro - BSIT - 74 - Failed
+Ana - BSIS - 65 - Failed
+```
+
+### Important
+
+Do not manually type the student's status.
+
+The status should come from the `getStatus()` function.
+
+---
+
+# Task 4 – Create an Arrow Function
+**Time: 10 minutes**
+
+Create an arrow function named `getMessage`.
+
+It should accept:
+
+- `name`
+- `status`
+
+and return a sentence describing the student's performance.
+
+### Function Structure
+
+```javascript
+const getMessage = (name, status) => {
+    // your code here
+};
+```
+
+### Example Result
+
+```text
+Juan is an Excellent student.
+```
+
+For example:
+
+```javascript
+console.log(getMessage("Juan", "Excellent"));
+```
+
+should produce:
+
+```text
+Juan is an Excellent student.
+```
+
+---
+
+# Task 5 – Final Challenge
+**Time: 10 minutes**
+
+Now combine everything you have learned into one complete program.
+
+Your final program must:
+
+1. Loop through all students using a `for` loop.
+2. Access student properties using object property access.
+3. Determine the status using the `getStatus()` regular function.
+4. Generate a message using the `getMessage()` arrow function.
+5. Use an `if` statement to identify Excellent students.
+6. Display all relevant student information.
+
+### Expected Output Format
+
+```text
+--------------------
+Name: Juan
+Course: BSIT
+Grade: 92
+Status: Excellent
+Juan is an Excellent student.
+Achievement: Outstanding Performance!
+
+--------------------
+Name: Maria
+Course: BSCS
+Grade: 85
+Status: Passed
+Maria is a Passed student.
+
+--------------------
+Name: Pedro
+Course: BSIT
+Grade: 74
+Status: Failed
+Pedro is a Failed student.
+
+--------------------
+Name: Ana
+Course: BSIS
+Grade: 65
+Status: Failed
+Ana is a Failed student.
+```
+
+---
+
+# Optional Challenge
+
+If you finish early, add the following features:
+
+### Challenge 1 – Add More Students
+
+Add at least **two more student objects**.
+
+Example:
+
+```javascript
+{
+    name: "Carlos",
+    age: 19,
+    course: "BSIT",
+    grade: 90
+}
+```
+
+---
+
+### Challenge 2 – Add a "Needs Improvement" Status
+
+Modify the grading system:
+
+| Grade | Status |
+|---|---|
+| 90–100 | Excellent |
+| 75–89 | Passed |
+| 70–74 | Needs Improvement |
+| Below 70 | Failed |
+
+Modify your `getStatus()` function accordingly.
+
+---
+
+### Challenge 3 – Display an Achievement
+
+If the student's status is `"Excellent"`, display:
+
+```text
+Achievement: Outstanding Performance!
+```
+
+Otherwise, do not display the achievement.
+
+---
+
+# Submission Requirements
+
+Before submitting, make sure that:
+
+- Your JavaScript file is named `{lastname}-performance.js`.
+- The program runs without errors.
+- All students are processed.
+- The required output is displayed.
+- The program uses all required JavaScript concepts.
+- Make sure you push, pull and commit **(NO push and pull in this repo will get no score for this activity)**
+---
+
+# Self-Check
+
+Before submitting, check each item:
+
+- [ ] I created an array containing student objects.
+- [ ] I accessed object properties correctly.
+- [ ] I used an `if...else if...else` statement.
+- [ ] I created and called a regular function.
+- [ ] I used a `for` loop.
+- [ ] I created and called an arrow function.
+- [ ] My final program runs without errors.
+- [ ] My output matches the required format.
+
+---
+
+# Assessment Rubric
+
+| Criteria | Points | Description |
+|---|---:|---|
+| Object & Property Access | 10 | Correctly creates and accesses student objects. |
+| `if` Statements | 15 | Correctly determines student status. |
+| `for` Loop | 15 | Correctly processes all student records. |
+| Regular Function | 10 | Creates and uses `getStatus()`. |
+| Arrow Function | 10 | Creates and uses `getMessage()`. |
+| Final Program | 20 | All concepts work together correctly. |
+| Output & Code Quality | 10 | Output is clear and code is organized. |
+| Activity Completion | 10 | Completes the activity within the allotted time. |
+| **TOTAL** | **100** | |
+
+---
+
+# Concepts Covered
+
+By completing this activity, you will practice:
+
+```text
+JavaScript Objects
+       ↓
+Property Access
+       ↓
+if / else if / else
+       ↓
+Regular Function
+       ↓
+for Loop
+       ↓
+Arrow Function
+       ↓
+Integrated JavaScript Program
