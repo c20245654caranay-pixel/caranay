@@ -9,7 +9,7 @@ ul {
 nav {
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     margin-left: 50px;
     margin-right: 100px;
 }
@@ -17,6 +17,8 @@ nav {
 nav ul {
     display: flex;
     gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 main {
@@ -24,6 +26,8 @@ main {
     flex-wrap: wrap;
     gap: 30px;
     padding: 50px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 main section {
@@ -40,7 +44,33 @@ form {
     gap: 30px;
 }
 
-#services {
-    padding: 0 50px;
+@media(max-width: 601px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
 
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        padding: 15px;
+        margin: 10px;
+        gap: 20px;
+    }
+
+    main section {
+        flex: 1 1 100%;
+        min-width: 0;
+        padding: 15px;
+    }
+
+    @media(max-width: 600px) {
+        h1 {
+            font-size: 100px;
+            color: red;
+        }
+    }
 }
