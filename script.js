@@ -23,7 +23,9 @@ function greet(greetings, name) {
 }
 const heading = document.querySelector("h1");
 heading.textContent = "Antonio";
-console.log(heading);
+heading.style.color = "blue";
+heading.style.backgroundColor = "yellow";
+console.log(heading.textContent);
 
 const contactHeader = document.querySelector("#contact h2");
 console.log(contactsHeading);
